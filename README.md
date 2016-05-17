@@ -10,7 +10,10 @@ required:
    'lxc-container-name' somewhere between your current working directory and /.
    This allows you to use the same container name for a whole subsection of
    your home directory (for example a number of related bzr branches).
- * You must have SSH set up so 'ssh <container_name>' does the correct thing.
+
+   If you don't have lxc containers configured in DNS, you can use the
+   container IP address instead.
+ * You must have SSH set up so `ssh <container_name>` does the correct thing.
    You probably also want to have your ssh key added to the container, so
    you're not prompted for a password every time you run this script.
 
@@ -21,4 +24,3 @@ To run a command in the container, simply do this:
 for example:
 
   $ l make test
-
