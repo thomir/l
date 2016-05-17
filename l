@@ -34,11 +34,11 @@ def main():
     if len(sys.argv) < 2:
         print("Missing command to run!")
     arguments = [
-        'ssh', container_name,
-        'cd %s && %s' % (os.getcwd(), ' '.join(sys.argv[1:]))
+        'ssh', '-t', container_name,
+        'cd %s && TERM=screen %s' % (os.getcwd(), ' '.join(sys.argv[1:]))
     ]
     print("Running: %r" % arguments)
-    subprocess.call(arguments)
+    sys.exit(subprocess.call(arguments))
 
 
 def get_lxc_container_name_or_raise():
