@@ -19,8 +19,8 @@ required:
 
 To run a command in the container, simply do this:
 
-  $ l `<command>`
+  `l <command>`
 
 for example:
 
-  $ l make test
+  `l make test`
